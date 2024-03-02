@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import { Link } from "react-router-dom";
@@ -8,25 +8,25 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const checkCredentials = (email:string, password:string) => {
-    
-    return email == 'user@example.com' && password == 'password';
-  }
+  const checkCredentials = (email: string, password: string) => {
+    return email == "user@example.com" && password == "password";
+  };
 
-  const handleLogin = () => {
+  const handleLogin = (event: FormEvent) => {
+    event.preventDefault();
     if (checkCredentials(email, password)) {
-      navigate('/');
+      navigate("/");
     } else {
-      alert('Invalid credentials');
+      alert("Invalid credentials");
     }
   };
 
   return (
     <div className="loginContainer">
       <div className="flexCenter loginDiv">
-        <form className="loginForm">
-          <div className='flexCenter'>
-            <img id="logo" src="./public/logo.svg" alt="Nexus logo"/>
+        <form className="loginForm" onSubmit={handleLogin}>
+          <div className="flexCenter">
+            <img id="logo" src="./public/logo.svg" alt="Nexus logo" />
             <h1>Nexus Crusaders</h1>
           </div>
           <div className="email">
@@ -39,10 +39,18 @@ const Login = () => {
             />
           </div>
           <div className="password">
-            <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+            <input
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
           </div>
-          <button className="flexCenter iniciarSesion" type="submit">Iniciar Sesion</button>
-          <Link className='login' to='/registro'>Registrarse</Link>
+          <button className="flexCenter iniciarSesion" type="submit">
+            Iniciar Sesion
+          </button>
+          <Link className="login" to="/registro">
+            Registrarse
+          </Link>
         </form>
       </div>
     </div>
