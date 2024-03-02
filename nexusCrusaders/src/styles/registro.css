@@ -1,0 +1,70 @@
+body{
+    margin: 0px;
+    height: 100vh;
+}
+
+.name{
+    text-align: center;
+    font-weight: bold;
+    margin: 5%;
+}
+
+.lastname{
+    text-align: center;
+    font-weight: bold;
+    margin: 2%;
+}
+
+.credentials{
+    text-align: center;
+    font-weight: bold;
+    margin: 2%;
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+}
+
+.divRegistro{
+    background: linear-gradient(rgb(107, 125, 146), rgb(50, 50, 239));
+    margin-inline: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#formRegistro{
+    background-color: rgb(128, 128, 128, 0.5);
+    width: 50%;
+}
+
+#formRegistro > div {
+    margin: 0px;
+}
+
+#formRegistro > div > input {
+    border-radius: 5px;
+    border-style: solid;
+    width: 50%;
+}
+
+.credentials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login{
+    text-align: center;
+    font-weight: bold;
+    margin: 2%;
+    text-decoration: none;
+}
+
+.login > p {
+    margin-block: 0px;
+}
