@@ -1,0 +1,30 @@
+.landing-container {
+    .nav {
+      display: flex;
+      margin: 0;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+  
+    .left {
+      display: flex;
+      align-items: center;
+    }
+  
+    .right {
+      display: flex;
+      text-wrap: nowrap;
+      align-items: center;
+  
+      a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: black;
+  
+        &:hover {
+          color: rgb(57, 57, 209);
+        }
+      }
+    }
+  }
