@@ -1,13 +1,18 @@
-.container {
-  flex: 1;
-  background-color: rgba(0,0,0,.6);
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.nav{
-    font-size: xx-large;
-    text-align: center;
-    margin-top:8% ;
-    
+.container {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav {
+  font-size: xx-large;
+  text-align: center;
+  width: 100vw;
 }
 .login {
   background-color: aquamarine;
@@ -16,16 +21,20 @@
   margin: 7%;
 }
 
-
-button{
-    margin: 3%;
+.content {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
 }
 
-input{
-    margin: 5px;
-    width: 12vw;
-    height: 3vh;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 9%;
+button {
+  margin: 3%;
+}
+
+input {
+  margin: 5px;
+  width: 12vw;
+  height: 3vh;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 9%;
 }
