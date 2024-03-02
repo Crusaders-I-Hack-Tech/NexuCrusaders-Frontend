@@ -3,68 +3,80 @@ body{
     height: 100vh;
 }
 
-.name{
-    text-align: center;
-    font-weight: bold;
-    margin: 5%;
-}
+.registroContainer{
+    .divRegistro, .flexCenter{
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .divRegistro{
+        height: 100vh;
+        width: 100%;
+    }
 
-.lastname{
-    text-align: center;
-    font-weight: bold;
-    margin: 2%;
-}
+    .name, .lastname, .credentials{
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    #formRegistro{
+        border-radius: 6px;
+        background-color: #efe7da;
+        width: 40%;
+        box-shadow: 0px 3px 3px 2px rgba(128, 128, 128, 0.4);
+    }
+    
+    #formRegistro > div {
+        margin: 0px;
+    }
+    
+    #formRegistro > div > input, .submitButton{
+        margin-block: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border-style: solid;
+        width: 57%;
+    }
+    
+    .logoDiv{
+        padding-block: 10px;
+    }
 
-.credentials{
-    text-align: center;
-    font-weight: bold;
-    margin: 2%;
-}
-
-#root{
-    width: 100vw;
-    height: 100vh;
-}
-
-.divRegistro{
-    background: linear-gradient(rgb(107, 125, 146), rgb(50, 50, 239));
-    margin-inline: auto;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#formRegistro{
-    background-color: rgb(128, 128, 128, 0.5);
-    width: 50%;
-}
-
-#formRegistro > div {
-    margin: 0px;
-}
-
-#formRegistro > div > input {
-    border-radius: 5px;
-    border-style: solid;
-    width: 50%;
-}
-
-.credentials{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.login{
-    text-align: center;
-    font-weight: bold;
-    margin: 2%;
-    text-decoration: none;
-}
-
-.login > p {
-    margin-block: 0px;
+    #logo{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .credentials{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .submitButton{
+        font-weight: 600;
+        height: 40px;
+        width: 40%;
+        margin-block: 5px;
+        border: 0px;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #28666E;
+        color: white;
+    }
+    
+    .login{
+        width: 60%;
+        color: #0B132B;
+        background-color: transparent;
+        text-align: center;
+        font-weight: bold;
+        margin: 15px;
+        margin-inline: auto;
+        text-decoration: none;
+    }
 }
