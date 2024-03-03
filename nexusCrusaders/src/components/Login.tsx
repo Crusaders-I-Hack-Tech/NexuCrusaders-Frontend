@@ -2,40 +2,45 @@ import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const checkCredentials = (email: string, password: string) => {
-    return email == "user@example.com" && password == "password";
-  };
-
-  const handleLogin = (event: FormEvent) => {
+  const handleSubmit = async (event:FormEvent) => {
     event.preventDefault();
-    if (checkCredentials(email, password)) {
-      navigate("/");
-    } else {
-      alert("Invalid credentials");
+  
+    const user = {
+      username: username,
+      password: password,
+    };
+  
+    try {
+      const response = await axios.post("http://10.22.135.18:5000/users/login", user);
+      console.log(response.data);
+      localStorage.setItem("userhash", response.data.userhash);
+    } catch (error) {
+      console.error("Hubo un error al iniciar sesión", error);
     }
   };
 
   return (
     <div className="loginContainer">
       <div className="flexCenter loginDiv">
-        <form className="loginForm" onSubmit={handleLogin}>
+        <form className="loginForm" onSubmit={handleSubmit}>
           <div className="flexCenter">
             <img id="logo" src="./public/logo.svg" alt="Nexus logo" />
             <h1>Nexus Crusaders</h1>
           </div>
           <div className="email">
             <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              name="username"
+              id="username"
+              placeholder="username"
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div className="password">

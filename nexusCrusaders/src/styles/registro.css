@@ -16,7 +16,7 @@ body{
         width: 100%;
     }
 
-    .name, .lastname, .credentials{
+    .name, .lastname, .credentials, .username{
         text-align: center;
         font-weight: bold;
     }
