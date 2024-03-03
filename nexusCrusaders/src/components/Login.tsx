@@ -1,8 +1,13 @@
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/login.css";
 import { Link } from "react-router-dom";
+
+
 import axios from "axios";
+import NavBar from "./NavBar";
+import "../styles/login.css";
+
+
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -28,6 +33,7 @@ const Login = () => {
 
   return (
     <div className="loginContainer">
+      <NavBar></NavBar>
       <div className="flexCenter loginDiv">
         <form className="loginForm" onSubmit={handleSubmit}>
           <div className="flexCenter">

@@ -1,8 +1,11 @@
+
 import { Link } from "react-router-dom";
 import { FormEvent, useState } from "react";
 import axios from "axios";
+import NavBar from "./NavBar";
 
 import "../styles/registro.css";
+
 
 const Registro = () => {
   const [name, setName] = useState("");
@@ -34,6 +37,8 @@ const Registro = () => {
 
   return (
     <div className="registroContainer">
+
+       <NavBar></NavBar>
       <div className="divRegistro">
         <form id="formRegistro" onSubmit={handleSubmit}>
           <div className="flexCenter logoDiv">
@@ -90,6 +95,7 @@ const Registro = () => {
           </Link>
         </form>
       </div>
+
     </div>
   );
 };
