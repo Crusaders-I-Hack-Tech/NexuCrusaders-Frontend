@@ -1,0 +1,82 @@
+body{
+    margin: 0px;
+    height: 100vh;
+}
+
+.registroContainer{
+    .divRegistro, .flexCenter{
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .divRegistro{
+        height: 100vh;
+        width: 100%;
+    }
+
+    .name, .lastname, .credentials, .username{
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    #formRegistro{
+        border-radius: 6px;
+        background-color: #efe7da;
+        width: 40%;
+        box-shadow: 0px 3px 3px 2px rgba(128, 128, 128, 0.4);
+    }
+    
+    #formRegistro > div {
+        margin: 0px;
+    }
+    
+    #formRegistro > div > input, .submitButton{
+        margin-block: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        border-style: solid;
+        width: 57%;
+    }
+    
+    .logoDiv{
+        padding-block: 10px;
+    }
+
+    #logo{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .credentials{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .submitButton{
+        font-weight: 600;
+        height: 40px;
+        width: 40%;
+        margin-block: 5px;
+        border: 0px;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: #28666E;
+        color: white;
+    }
+    
+    .login{
+        width: 60%;
+        color: #0B132B;
+        background-color: transparent;
+        text-align: center;
+        font-weight: bold;
+        margin: 15px;
+        margin-inline: auto;
+        text-decoration: none;
+    }
+}
