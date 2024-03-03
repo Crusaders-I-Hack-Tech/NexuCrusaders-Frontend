@@ -1,5 +1,12 @@
 .landing-container {
   .content{
     padding-top: 130px;
+    background: linear-gradient(#28666e, white);
+  }
+
+  .Cal{
+    margin-inline: auto;
+    display: flex;
+    flex-direction: row;
   }
 }

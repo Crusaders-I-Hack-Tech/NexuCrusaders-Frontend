@@ -1,0 +1,7 @@
+.diaContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #efe7da;
+    width: 12%;
+    border: 1px solid black;
+}

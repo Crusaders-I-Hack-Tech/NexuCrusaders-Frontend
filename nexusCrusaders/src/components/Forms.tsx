@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { useState, FormEvent } from "react";
+
 import axios from "axios";
+
 
 import "../styles/forms.css";
 
 const Forms = () => {
+
     const [speciality,setSpecialty]=useState('');
     const [experience,setExperience] = useState('');
     const [abillities,setAbilities]=useState('');
@@ -69,7 +72,9 @@ const Forms = () => {
                 <label htmlFor="tiempo">¿Cuántas horas tienes disponibles para estudiar cada semana?</label>
                 <div className="range">
                     2
+
                     <input className="rangeInput" type="range" name="tiempo" min={2} max={50} step={1} value={horas} onInput={(e) => setHoras((e.target as HTMLInputElement).value)} />
+
                     50
                 </div>
                 <div className="horas">
