@@ -36,11 +36,13 @@ const Forms = () => {
                 <label htmlFor="tiempo">¿Cuántas horas tienes disponibles para estudiar cada semana?</label>
                 <div className="range">
                     2
-                    <input className="rangeInput" type="range" name="tiempo" min={2} max={50}/>
+                    <input className="rangeInput" type="range" name="tiempo" min={2} max={50} step={0.1}/>
                     50
                 </div>
-                <label htmlFor="horas">Tiempo:</label>
-                <input type="number" name="horas"/>
+                <div className="horas">
+                    <label htmlFor="horas">Tiempo:</label>
+                    <input id="inputHoras" type="number" name="horas" min={2} max={50}/>
+                </div>
                 <label htmlFor="tipoAprendizaje">¿Cuál de las siguientes afirmaciones concuerda contigo?</label>
                 <select name="tipoAprendizaje">
                     <option value="auditory">Para aprender me funciona más ver videos en internet para comprender qué se está haciendo y luego hacerlo yo.</option>

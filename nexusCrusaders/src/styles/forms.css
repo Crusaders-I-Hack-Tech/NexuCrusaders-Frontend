@@ -41,10 +41,13 @@
         padding-top: 10px;
     }
 
-    .range{
+    .horas, .range{
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+
+    .range{
         justify-content: space-between;
         width: 100%;
         font-family: "Poppins";
@@ -52,6 +55,29 @@
 
     .rangeInput{
         width: 94%;
+    }
+
+    .horas{
+        justify-content: center;
+    }
+
+    .horas > label{
+        padding: 0px;
+        margin-right: 10px;
+    }
+
+    .horas > input {
+        background-color: transparent;
+        border-style: solid;
+        border-color: rgba(128, 128, 128, 0.4);
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 
     .submit{
