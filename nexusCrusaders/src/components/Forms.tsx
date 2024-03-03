@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import { useState, FormEvent } from "react";
+
 import "../styles/forms.css";
 
 const Forms = () => {
-    
+    const [horas, setHoras] = useState("2");
+
     return(
         <form className="formsContainer">
             <div className="cabecera">
@@ -37,12 +40,12 @@ const Forms = () => {
                 <label htmlFor="tiempo">¿Cuántas horas tienes disponibles para estudiar cada semana?</label>
                 <div className="range">
                     2
-                    <input className="rangeInput" type="range" name="tiempo" min={2} max={50} step={0.1}/>
+                    <input className="rangeInput" type="range" name="tiempo" min={2} max={50} step={0.1} value={horas} onInput={(e) => setHoras(e.target.value)}/>
                     50
                 </div>
                 <div className="horas">
                     <label htmlFor="horas">Tiempo:</label>
-                    <input id="inputHoras" type="number" name="horas" min={2} max={50}/>
+                    <input id="inputHoras" type="number" name="horas" min={2} max={50} value={horas}/>
                 </div>
                 <label htmlFor="tipoAprendizaje">¿Cuál de las siguientes afirmaciones concuerda contigo?</label>
                 <select name="tipoAprendizaje">

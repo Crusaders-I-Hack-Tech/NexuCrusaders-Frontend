@@ -37,8 +37,7 @@ const Registro = () => {
 
   return (
     <div className="registroContainer">
-
-       <NavBar></NavBar>
+      <NavBar></NavBar>
       <div className="divRegistro">
         <form id="formRegistro" onSubmit={handleSubmit}>
           <div className="flexCenter logoDiv">
@@ -90,7 +89,7 @@ const Registro = () => {
           <button className="flexCenter submitButton" type="submit">
             Registrar Cuenta
           </button>
-          <Link className="flexCenter login" to="/">
+          <Link className="flexCenter login" to="/login">
             Iniciar Sesion
           </Link>
         </form>
