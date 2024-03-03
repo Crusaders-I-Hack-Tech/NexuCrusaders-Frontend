@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/forms.css";
 
 const Forms = () => {
+    
     return(
         <form className="formsContainer">
             <div className="cabecera">
