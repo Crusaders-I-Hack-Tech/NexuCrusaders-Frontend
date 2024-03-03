@@ -38,7 +38,7 @@ const Login = () => {
         <form className="loginForm" onSubmit={handleSubmit}>
           <div className="flexCenter">
             <img id="logo" src="./public/logo.svg" alt="Nexus logo" />
-            <h1>Nexus Crusaders</h1>
+            <h1 >Nexus Crusaders</h1>
           </div>
           <div className="email">
             <input
