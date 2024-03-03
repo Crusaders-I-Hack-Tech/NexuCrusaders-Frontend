@@ -1,9 +1,12 @@
 import { Link } from 'react-router-dom';
 import '../styles/registro.css'
+import NavBar from "./NavBar";
+
 
 const Registro = () => {
   return (
     <div className="registroContainer">
+        <NavBar></NavBar>
         <div className="divRegistro">
             <form id='formRegistro'>
                 <div className='flexCenter logoDiv'>
@@ -22,7 +25,7 @@ const Registro = () => {
                     <input type="text" placeholder="Confirmar Contrasena" />
                 </div>
                 <button className="flexCenter submitButton" type="submit">Registrar Cuenta</button>
-                <Link className="flexCenter login" to="/">Iniciar Sesion</Link>
+                <Link className="flexCenter login" to="/login">Iniciar Sesion</Link>
             </form>
         </div>
     </div>
